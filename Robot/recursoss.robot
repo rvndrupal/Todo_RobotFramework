@@ -8,6 +8,7 @@ Library     String
 #${url}         https://www.amazon.com.mx/?ref=icp_country_us_t1
 #${url}          http://www.practiceselenium.com/practice-form.html
 #${url}          http://demowebshop.tricentis.com/register
+#C:/Python/robotframework/amtif/test_uno/result_uno/result_uno/img/Captura.png
 
 
 ***Keywords***
@@ -42,6 +43,10 @@ Click
     [Arguments]    ${arg1}
     Click Element   xpath=${arg1}
 
+Click IE
+    [Arguments]    ${arg1}
+    Click Link      id=${arg1}
+
 Limpiar
     [Arguments]    ${arg1}
     Clear Element Text   xpath=${arg1}
@@ -66,6 +71,11 @@ Obtener
     [Arguments]    ${arg1}  
     Get Value   xpath=${arg1}    
 
+Obtener dos
+    [Arguments]    ${arg1}  
+    Wait Until Page Contains  Hello   xpath=${arg1}    
+
+
 Titulo
     [Arguments]    ${arg1}
     Title Should Be    xpath=${arg1} 
@@ -86,7 +96,7 @@ Esperar Objeto
     [Arguments]    ${arg1}
     Wait Until Page Contains    ${arg1} 
 
-Esperar Iniciar
+Esperar Iniciar ok
     [Arguments]    ${arg1}
     Set Selenium Timeout    ${arg1} seconds
 
@@ -116,8 +126,22 @@ Obtener Titulo
     Get Title    
 
 Pantalla
-    #[Arguments]     ${arg1}
-    Capture Page Screenshot      
+    [Arguments]     ${arg1}
+    Capture Page Screenshot     ${arg1}
+
+Login
+    Texto    (//input[contains(@type,'text')])[1]   erojasc14760  
+    Texto    (//input[@class='form-control'])[2]    sena2o14
+    Pantalla
+    Click     //input[@type='submit']
+
+Scroll
+    [Arguments]   ${arg1}   ${arg2}
+    execute javascript      window.scrollTo(${arg1},${arg2})
+
+
+
+        
 
      
     
