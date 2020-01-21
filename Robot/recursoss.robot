@@ -145,6 +145,10 @@ Video Iniciar
 Video Finalizar
     Stop Video Recording
 
+Cargar
+    [Arguments]  ${arg1}    ${arg2}
+    Choose File   ${arg1}   ${arg2}
+
 
 
         

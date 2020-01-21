@@ -88,3 +88,15 @@ Grabar Video
 https://mihaiparvu.github.io/ScreenCapLibrary/ScreenCapLibrary.html#Start%20Video%20Recording
 
 pip install --upgrade robotframework-screencaplibrary
+
+
+###########################################
+Para cargar y doble click
+
+http://rainmanwy.github.io/robotframework-SikuliLibrary/doc/SikuliLibrary.html
+
+pip install robotframework-SikuliLibrary
+
+demo
+
+https://stackoverflow.com/questions/44583374/upload-a-file-in-browser-using-robot-framework-test
