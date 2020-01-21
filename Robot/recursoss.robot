@@ -139,6 +139,12 @@ Scroll
     [Arguments]   ${arg1}   ${arg2}
     execute javascript      window.scrollTo(${arg1},${arg2})
 
+Video Iniciar
+    Start Video Recording
+
+Video Finalizar
+    Stop Video Recording
+
 
 
         

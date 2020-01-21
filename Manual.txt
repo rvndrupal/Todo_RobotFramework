@@ -80,3 +80,11 @@ Checar pagina muy importante de  Selenium
 https://selenium.dev/
 
 https://selenium.dev/selenium/docs/api/py/index.html
+
+
+###############################################
+Grabar Video
+
+https://mihaiparvu.github.io/ScreenCapLibrary/ScreenCapLibrary.html#Start%20Video%20Recording
+
+pip install --upgrade robotframework-screencaplibrary

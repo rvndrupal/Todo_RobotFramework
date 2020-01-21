@@ -3,8 +3,9 @@ Documentation   Prueba uno Amazon
 Library     String
 Library     DateTime
 Resource    ./recursoss.robot
+Library     ScreenCapLibrary
 
-#robot -d result  trece.robot
+#robot -d result  uno.robot
 
 ***Variables***
 ${url}         https://www.amazon.es/amazonprime?_encoding=UTF8&%2AVersion%2A=1&%2Aentries%2A=0
@@ -17,6 +18,8 @@ ${dir}      Img
 
 *** Test Cases ***
 001 Ventanas Alertas y Frames
+    Video Iniciar  
+    Dormir  5
     Abrir navegador    ${url}      ${navegador}
     Maximizar  
     Texto      //input[@name="field-keywords"]    beisbol
@@ -26,6 +29,8 @@ ${dir}      Img
     Pantalla        ${dir}/Capture2.png
     Click       (//input[contains(@class,'a-button-input')])[1]
     Pantalla         ${dir}/Capture3.png
+
+    Video Finalizar
 
    
     
