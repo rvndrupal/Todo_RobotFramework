@@ -1,0 +1,10 @@
+################################3
+Libreria de Intellibot  video  8 del curso.
+
+https://github.com/millennialmedia/intellibot
+
+########################################
+CSS and XPath checker  extension chrome
+
+########################################
+Selenium IDE  par firefox   extension

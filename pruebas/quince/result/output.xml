@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200127 12:21:40.229" rpa="false">
+<suite id="s1" name="Quince" source="C:\Todo_RobotFramework\pruebas\quince\quince.robot">
+<test id="s1-t1" name="Test002 Prueba Dos">
+<kw name="Abrir navegador">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${nav}</arg>
+</arguments>
+<msg timestamp="20200127 12:21:40.611" level="INFO">Opening browser 'Get Selection From User Which browser? chrome firefox' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200127 12:21:40.612" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20200127 12:21:40.612" endtime="20200127 12:21:40.612"></status>
+</kw>
+<msg timestamp="20200127 12:21:40.613" level="FAIL">ValueError: getselectionfromuserwhichbrowser?chromefirefox is not a supported browser.</msg>
+<status status="FAIL" starttime="20200127 12:21:40.611" endtime="20200127 12:21:40.613"></status>
+</kw>
+<status status="FAIL" starttime="20200127 12:21:40.611" endtime="20200127 12:21:40.613"></status>
+</kw>
+<tags>
+<tag>t002</tag>
+</tags>
+<status status="FAIL" starttime="20200127 12:21:40.610" endtime="20200127 12:21:40.614" critical="yes">ValueError: getselectionfromuserwhichbrowser?chromefirefox is not a supported browser.</status>
+</test>
+<doc>Prueba uno Amazon</doc>
+<status status="FAIL" starttime="20200127 12:21:40.231" endtime="20200127 12:21:40.615"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">t002</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Quince">Quince</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

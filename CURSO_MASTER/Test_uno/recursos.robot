@@ -1,5 +1,6 @@
 ***Settings***
 Library     SeleniumLibrary
+#Library     Selenium2Library
 Library     String
 
 ***Variables***
@@ -14,7 +15,10 @@ ${dir}      Img
 
 ***Keywords***
 Abrir navegador
-    Open Browser    ${url}   ${navegador}
+    [Arguments]     ${arg1}   ${arg2}
+    Open Browser    ${arg1}   ${arg2}
+
+
 
 Abrir navegador2
     Open Browser    ${url2}   ${navegador}
@@ -102,6 +106,10 @@ Print
     [Arguments]    ${arg1}
     log to console    ${arg1} 
 
+Print Variable
+    [Arguments]    ${var}
+    Log    ${var} 
+
 Esperar Objeto
     [Arguments]    ${arg1}
     Wait Until Page Contains    ${arg1} 
@@ -109,6 +117,10 @@ Esperar Objeto
 Esperar Iniciar ok
     [Arguments]    ${arg1}
     Set Selenium Timeout    ${arg1} seconds
+
+Esperar Iniciar Forzar
+    [Arguments]    ${arg1}
+    Set Selenium Implicit Wait    ${arg1} seconds
 
 Alerta ok
     #[Arguments]   ${arg1}
@@ -180,8 +192,76 @@ Resultado
     Capture Page Screenshot     ${dir}
     log to console    ${print} 
 
+Tabulador
+    Press Keys    TAB   '\ue004'
 
 
+
+Limpiar Texto
+    [Arguments]    ${xpath}
+    Clear Element Text    xpath=${xpath} 
+
+
+Continuar 
+    Print  OK continuo
+
+Cerrar Todos
+    Dormir  .4
+    Close All Browsers
+
+Cambiar navegador
+    [Arguments]     ${nav}
+    go to     ${nav}
+
+Regresar navegador
+    go back
+
+
+######### Opciones del Mause ****************
+Menu emergente
+    [Arguments]     ${xpath}
+    Open Context Menu   ${xpath}
+
+Doble click
+    [Arguments]     ${xpath}
+    Double Click Element   ${xpath}
+
+Mause down
+    [Arguments]     ${xpath}
+    Mouse Down   ${xpath}
+
+    
+
+#############################################
+
+############ Opciones del Teclado #############
+Texto enter
+    [Arguments]   ${xpath}   
+    Press Key     ${xpath}    \\13
+
+
+Texto tab
+    [Arguments]   ${xpath}   
+    Press Key     ${xpath}    \\9
+
+##############################################
+
+######### Verificar elementos ###############
+Verificar texto
+    [Arguments]   ${poner_texto}   ${tiempo} 
+    Wait Until Page Contains    ${poner_texto}    ${tiempo}
+
+Verificar elemento
+    [Arguments]   ${xpath}   ${tiempo} 
+    Wait Until Page Contains Element    ${xpath}    ${tiempo}
+
+	
+
+#############################################
+
+Obtener Url   
+    ${url}     Get Location  
+    [Return]    ${url}
         
 
      
@@ -193,7 +273,7 @@ Resultado
 
 #Opciones del Raton
 ##################################
-MO
+Mause over
     [Arguments]    ${arg1}
     Mouse Over   xpath=${arg1}
 

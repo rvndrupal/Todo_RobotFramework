@@ -1,5 +1,6 @@
 ***Settings***
 Library     SeleniumLibrary
+#Library     Selenium2Library
 Library     String
 
 ***Variables***
@@ -14,7 +15,8 @@ ${dir}      Img
 
 ***Keywords***
 Abrir navegador
-    Open Browser    ${url}   ${navegador}
+    [Arguments]     ${arg1}   ${arg2}
+    Open Browser    ${arg1}   ${arg2}
 
 Abrir navegador2
     Open Browser    ${url2}   ${navegador}
@@ -102,6 +104,10 @@ Print
     [Arguments]    ${arg1}
     log to console    ${arg1} 
 
+Print Variable
+    [Arguments]    ${var}
+    Log    ${var} 
+
 Esperar Objeto
     [Arguments]    ${arg1}
     Wait Until Page Contains    ${arg1} 
@@ -175,10 +181,25 @@ Video Finalizar
 
 
 Resultado
-    [Arguments]   ${tiempo}   ${dir}    ${print}
+    [Arguments]   ${tiempo}   ${dir}    ${print}   
     sleep       ${tiempo}   
     Capture Page Screenshot     ${dir}
     log to console    ${print} 
+    
+
+Tabulador
+    Press Keys    TAB   '\ue004'
+
+Validar ret
+     [Arguments]   ${texto}
+     [Return]      ${texto}
+
+Limpiar Texto
+    [Arguments]    ${xpath}
+    Clear Element Text    xpath=${xpath} 
+
+
+
 
 
 

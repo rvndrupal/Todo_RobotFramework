@@ -1,0 +1,33 @@
+Forzar el orden de la Ejecución del Robot.
+--> 01__Demo2.robot
+--> 02__Demo1.robot
+
+Por los dos guiones bajos se basa.
+
+#########################################
+Ejecutar aleatorio.
+
+robot -d results  --randomize suites test
+
+#########################################
+Información más a Detalle.
+
+robot -d results -i search -L debug  test.robot
+
+##########################################
+Ver video once crear nuestras Propias Librerias con Python
+
+Video once curso 2 RF
+
+##########################################
+CREAR GRAFICAS
+pip install robotframework-allurereport
+
+url--> https://github.com/kootstra/robotframework-allurereport
+
+o esta
+
+pip install allure-robotframework
+$ robot --listener allure_robotframework ./my_robot_test
+
+https://pypi.org/project/allure-robotframework/
