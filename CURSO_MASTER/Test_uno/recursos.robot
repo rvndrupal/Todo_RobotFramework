@@ -322,11 +322,33 @@ Comparar
     [Arguments]    ${arg1}  ${arg2}
     Element Text Should Be   ${arg1}  ${arg2}
 
-
-
-    
-
-
 ######################
 # checar el de tiempo  Wait Until Keyword Succeeds 
+    
+
+Validar Texto
+    [Arguments]     ${texto}
+    Page Should Contain	    ${texto}
+
+Validar campo texto
+    [Arguments]     ${xpath_campo}
+    Page Should Contain Textfield   ${xpath_campo}
+
+Validar Boton
+    [Arguments]     ${xpath_buton}
+    Page Should Contain Button      ${xpath_buton}
+
+Validar checkbox
+    [Arguments]     ${xpath_checkbox}   ${mensaje}
+    Page Should Contain Checkbox        ${xpath_checkbox}       ${mensaje}
+
+Validar imagen
+    [Arguments]     ${xpath_imagen}   ${mensaje}
+    Page Should Contain Image        ${xpath_imagen}       ${mensaje}
+
+Validar tener texto
+    [Arguments]     ${xpath_texto}   ${comparar}    ${mensaje}
+    Element Text Should Be        ${xpath_texto}    ${comparar}    ${mensaje}
+
+
     
