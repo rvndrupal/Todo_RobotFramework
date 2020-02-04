@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200131 18:07:19.978" rpa="false">
-<suite id="s1" name="Validaciones" source="C:\Todo_RobotFramework\CURSO_MASTER\Test_uno\Validaciones.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200204 13:44:10.391" rpa="false">
+<suite id="s1" name="Tags" source="C:\Todo_RobotFramework\CURSO_MASTER\Test_uno\Tags.robot">
 <test id="s1-t1" name="TC001 Validar uno">
-<kw name="Abrir navegador" library="recursos">
+<kw name="Abrir setup" library="recursos" type="setup">
 <arguments>
 <arg>${url}</arg>
 <arg>chrome</arg>
+</arguments>
+<kw name="Abrir navegador" library="recursos">
+<arguments>
+<arg>${url}</arg>
+<arg>${nav}</arg>
 </arguments>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -13,17 +18,19 @@
 <arg>${arg1}</arg>
 <arg>${arg2}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:20.187" level="INFO">Opening browser 'chrome' to base url 'https://thetestingworld.com/'.</msg>
-<status status="PASS" starttime="20200131 18:07:20.186" endtime="20200131 18:07:26.925"></status>
+<msg timestamp="20200204 13:44:10.573" level="INFO">Opening browser 'chrome' to base url 'https://thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200204 13:44:10.573" endtime="20200204 13:44:18.014"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:20.186" endtime="20200131 18:07:26.926"></status>
+<status status="PASS" starttime="20200204 13:44:10.572" endtime="20200204 13:44:18.015"></status>
 </kw>
 <kw name="Maximizar" library="recursos">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200131 18:07:26.927" endtime="20200131 18:07:28.062"></status>
+<status status="PASS" starttime="20200204 13:44:18.015" endtime="20200204 13:44:19.155"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:26.926" endtime="20200131 18:07:28.062"></status>
+<status status="PASS" starttime="20200204 13:44:18.015" endtime="20200204 13:44:19.156"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:10.572" endtime="20200204 13:44:19.156"></status>
 </kw>
 <kw name="Validar imagen" library="recursos">
 <arguments>
@@ -36,10 +43,10 @@
 <arg>${xpath_imagen}</arg>
 <arg>${mensaje}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:28.086" level="INFO">Current page contains image '(//img[@src='/images/resized/images/sampledata/slideshow/sl-1_960_400.jpg'])[2]'.</msg>
-<status status="PASS" starttime="20200131 18:07:28.063" endtime="20200131 18:07:28.086"></status>
+<msg timestamp="20200204 13:44:19.177" level="INFO">Current page contains image '(//img[@src='/images/resized/images/sampledata/slideshow/sl-1_960_400.jpg'])[2]'.</msg>
+<status status="PASS" starttime="20200204 13:44:19.156" endtime="20200204 13:44:19.177"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:28.063" endtime="20200131 18:07:28.086"></status>
+<status status="PASS" starttime="20200204 13:44:19.156" endtime="20200204 13:44:19.177"></status>
 </kw>
 <kw name="Validar tener texto" library="recursos">
 <arguments>
@@ -47,17 +54,17 @@
 <arg>PERFORMANCE TESTING JMETER</arg>
 <arg>Se encontro el texto</arg>
 </arguments>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
 <arguments>
 <arg>${xpath_texto}</arg>
 <arg>${comparar}</arg>
 <arg>${mensaje}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:28.087" level="INFO">Verifying element '//*[@id="Mod97"]/h3/span' contains exact text 'PERFORMANCE TESTING JMETER'.</msg>
-<status status="PASS" starttime="20200131 18:07:28.087" endtime="20200131 18:07:28.124"></status>
+<msg timestamp="20200204 13:44:19.222" level="INFO">Element '//*[@id="Mod97"]/h3/span' contains text 'PERFORMANCE TESTING JMETER'.</msg>
+<status status="PASS" starttime="20200204 13:44:19.179" endtime="20200204 13:44:19.222"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:28.087" endtime="20200131 18:07:28.124"></status>
+<status status="PASS" starttime="20200204 13:44:19.177" endtime="20200204 13:44:19.222"></status>
 </kw>
 <kw name="Validar Texto" library="recursos">
 <arguments>
@@ -68,10 +75,10 @@
 <arguments>
 <arg>${texto}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:28.147" level="INFO">Current page contains text 'VIDEOS'.</msg>
-<status status="PASS" starttime="20200131 18:07:28.126" endtime="20200131 18:07:28.147"></status>
+<msg timestamp="20200204 13:44:19.243" level="INFO">Current page contains text 'VIDEOS'.</msg>
+<status status="PASS" starttime="20200204 13:44:19.223" endtime="20200204 13:44:19.243"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:28.125" endtime="20200131 18:07:28.147"></status>
+<status status="PASS" starttime="20200204 13:44:19.223" endtime="20200204 13:44:19.243"></status>
 </kw>
 <kw name="Click" library="recursos">
 <arguments>
@@ -82,10 +89,10 @@
 <arguments>
 <arg>xpath=${arg1}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:28.148" level="INFO">Clicking element 'xpath=//a[contains(@href,'users&amp;view=login&amp;Itemid=587')]'.</msg>
-<status status="PASS" starttime="20200131 18:07:28.148" endtime="20200131 18:07:29.574"></status>
+<msg timestamp="20200204 13:44:19.244" level="INFO">Clicking element 'xpath=//a[contains(@href,'users&amp;view=login&amp;Itemid=587')]'.</msg>
+<status status="PASS" starttime="20200204 13:44:19.244" endtime="20200204 13:44:20.380"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:28.148" endtime="20200131 18:07:29.575"></status>
+<status status="PASS" starttime="20200204 13:44:19.244" endtime="20200204 13:44:20.380"></status>
 </kw>
 <kw name="Dormir" library="recursos">
 <arguments>
@@ -96,10 +103,10 @@
 <arguments>
 <arg>${arg1}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:31.577" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200131 18:07:29.576" endtime="20200131 18:07:31.577"></status>
+<msg timestamp="20200204 13:44:22.382" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200204 13:44:20.381" endtime="20200204 13:44:22.382"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:29.576" endtime="20200131 18:07:31.578"></status>
+<status status="PASS" starttime="20200204 13:44:20.381" endtime="20200204 13:44:22.383"></status>
 </kw>
 <kw name="Validar campo texto" library="recursos">
 <arguments>
@@ -110,10 +117,10 @@
 <arguments>
 <arg>${xpath_campo}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:31.604" level="INFO">Current page contains text field '(//input[@type='text'])[1]'.</msg>
-<status status="PASS" starttime="20200131 18:07:31.578" endtime="20200131 18:07:31.604"></status>
+<msg timestamp="20200204 13:44:22.443" level="INFO">Current page contains text field '(//input[@type='text'])[1]'.</msg>
+<status status="PASS" starttime="20200204 13:44:22.385" endtime="20200204 13:44:22.444"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:31.578" endtime="20200131 18:07:31.605"></status>
+<status status="PASS" starttime="20200204 13:44:22.384" endtime="20200204 13:44:22.444"></status>
 </kw>
 <kw name="Validar Boton" library="recursos">
 <arguments>
@@ -124,10 +131,10 @@
 <arguments>
 <arg>${xpath_buton}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:31.649" level="INFO">Current page contains button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20200131 18:07:31.605" endtime="20200131 18:07:31.650"></status>
+<msg timestamp="20200204 13:44:22.489" level="INFO">Current page contains button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20200204 13:44:22.445" endtime="20200204 13:44:22.489"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:31.605" endtime="20200131 18:07:31.650"></status>
+<status status="PASS" starttime="20200204 13:44:22.445" endtime="20200204 13:44:22.489"></status>
 </kw>
 <kw name="Texto" library="recursos">
 <arguments>
@@ -140,10 +147,10 @@
 <arg>xpath=${arg1}</arg>
 <arg>${arg2}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:31.651" level="INFO">Typing text 'Rodrigo' into text field 'xpath=(//input[@type='text'])[1]'.</msg>
-<status status="PASS" starttime="20200131 18:07:31.651" endtime="20200131 18:07:31.749"></status>
+<msg timestamp="20200204 13:44:22.490" level="INFO">Typing text 'Rodrigo' into text field 'xpath=(//input[@type='text'])[1]'.</msg>
+<status status="PASS" starttime="20200204 13:44:22.490" endtime="20200204 13:44:22.574"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:31.651" endtime="20200131 18:07:31.749"></status>
+<status status="PASS" starttime="20200204 13:44:22.489" endtime="20200204 13:44:22.574"></status>
 </kw>
 <kw name="Validar checkbox" library="recursos">
 <arguments>
@@ -156,59 +163,249 @@
 <arg>${xpath_checkbox}</arg>
 <arg>${mensaje}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:31.772" level="INFO">Current page contains checkbox '(//input[@class='inputbox'])[1]'.</msg>
-<status status="PASS" starttime="20200131 18:07:31.750" endtime="20200131 18:07:31.772"></status>
+<msg timestamp="20200204 13:44:22.596" level="INFO">Current page contains checkbox '(//input[@class='inputbox'])[1]'.</msg>
+<status status="PASS" starttime="20200204 13:44:22.575" endtime="20200204 13:44:22.596"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:31.749" endtime="20200131 18:07:31.772"></status>
+<status status="PASS" starttime="20200204 13:44:22.574" endtime="20200204 13:44:22.596"></status>
 </kw>
-<kw name="Dormir" library="recursos">
-<arguments>
-<arg>4</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>${arg1}</arg>
-</arguments>
-<msg timestamp="20200131 18:07:35.774" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200131 18:07:31.773" endtime="20200131 18:07:35.774"></status>
-</kw>
-<status status="PASS" starttime="20200131 18:07:31.772" endtime="20200131 18:07:35.774"></status>
-</kw>
+<kw name="Cerrar setup" library="recursos" type="teardown">
 <kw name="Cerrar Todos" library="recursos">
 <kw name="Dormir" library="recursos">
 <arguments>
-<arg>.4</arg>
+<arg>2</arg>
 </arguments>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>${arg1}</arg>
 </arguments>
-<msg timestamp="20200131 18:07:36.176" level="INFO">Slept 400 milliseconds</msg>
-<status status="PASS" starttime="20200131 18:07:35.775" endtime="20200131 18:07:36.176"></status>
+<msg timestamp="20200204 13:44:24.598" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200204 13:44:22.597" endtime="20200204 13:44:24.598"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:35.775" endtime="20200131 18:07:36.177"></status>
+<status status="PASS" starttime="20200204 13:44:22.597" endtime="20200204 13:44:24.599"></status>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200131 18:07:36.177" endtime="20200131 18:07:38.299"></status>
+<status status="PASS" starttime="20200204 13:44:24.599" endtime="20200204 13:44:26.738"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:35.775" endtime="20200131 18:07:38.299"></status>
+<status status="PASS" starttime="20200204 13:44:22.597" endtime="20200204 13:44:26.738"></status>
 </kw>
-<status status="PASS" starttime="20200131 18:07:20.186" endtime="20200131 18:07:38.300" critical="yes"></status>
+<status status="PASS" starttime="20200204 13:44:22.596" endtime="20200204 13:44:26.739"></status>
+</kw>
+<tags>
+<tag>CasoUno</tag>
+</tags>
+<status status="PASS" starttime="20200204 13:44:10.571" endtime="20200204 13:44:26.739" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200131 18:07:19.980" endtime="20200131 18:07:38.302"></status>
+<test id="s1-t2" name="TC003 Validar tres">
+<kw name="Abrir setup" library="recursos" type="setup">
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<kw name="Abrir navegador" library="recursos">
+<arguments>
+<arg>${url}</arg>
+<arg>${nav}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:26.747" level="INFO">Opening browser 'chrome' to base url 'https://thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200204 13:44:26.746" endtime="20200204 13:44:33.606"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:26.745" endtime="20200204 13:44:33.606"></status>
+</kw>
+<kw name="Maximizar" library="recursos">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200204 13:44:33.607" endtime="20200204 13:44:34.749"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:33.606" endtime="20200204 13:44:34.749"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:26.744" endtime="20200204 13:44:34.749"></status>
+</kw>
+<kw name="Validar imagen" library="recursos">
+<arguments>
+<arg>(//img[@src='/images/resized/images/sampledata/slideshow/sl-1_960_400.jpg'])[2]</arg>
+<arg>Se encuentra la imagen slider</arg>
+</arguments>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${xpath_imagen}</arg>
+<arg>${mensaje}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:34.769" level="INFO">Current page contains image '(//img[@src='/images/resized/images/sampledata/slideshow/sl-1_960_400.jpg'])[2]'.</msg>
+<status status="PASS" starttime="20200204 13:44:34.750" endtime="20200204 13:44:34.769"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:34.750" endtime="20200204 13:44:34.769"></status>
+</kw>
+<kw name="Validar tener texto" library="recursos">
+<arguments>
+<arg>//*[@id="Mod97"]/h3/span</arg>
+<arg>PERFORMANCE TESTING JMETER</arg>
+<arg>Se encontro el texto</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${xpath_texto}</arg>
+<arg>${comparar}</arg>
+<arg>${mensaje}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:34.807" level="INFO">Element '//*[@id="Mod97"]/h3/span' contains text 'PERFORMANCE TESTING JMETER'.</msg>
+<status status="PASS" starttime="20200204 13:44:34.770" endtime="20200204 13:44:34.807"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:34.770" endtime="20200204 13:44:34.807"></status>
+</kw>
+<kw name="Validar Texto" library="recursos">
+<arguments>
+<arg>VIDEOS</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${texto}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:34.829" level="INFO">Current page contains text 'VIDEOS'.</msg>
+<status status="PASS" starttime="20200204 13:44:34.808" endtime="20200204 13:44:34.829"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:34.807" endtime="20200204 13:44:34.829"></status>
+</kw>
+<kw name="Click" library="recursos">
+<arguments>
+<arg>//a[contains(@href,'users&amp;view=login&amp;Itemid=587')]</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${arg1}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:34.831" level="INFO">Clicking element 'xpath=//a[contains(@href,'users&amp;view=login&amp;Itemid=587')]'.</msg>
+<status status="PASS" starttime="20200204 13:44:34.830" endtime="20200204 13:44:35.950"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:34.830" endtime="20200204 13:44:35.950"></status>
+</kw>
+<kw name="Dormir" library="recursos">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:37.951" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200204 13:44:35.950" endtime="20200204 13:44:37.952"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:35.950" endtime="20200204 13:44:37.952"></status>
+</kw>
+<kw name="Validar campo texto" library="recursos">
+<arguments>
+<arg>(//input[@type='text'])[1]</arg>
+</arguments>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${xpath_campo}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:37.982" level="INFO">Current page contains text field '(//input[@type='text'])[1]'.</msg>
+<status status="PASS" starttime="20200204 13:44:37.954" endtime="20200204 13:44:37.982"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:37.954" endtime="20200204 13:44:37.982"></status>
+</kw>
+<kw name="Validar Boton" library="recursos">
+<arguments>
+<arg>//button[@type='submit']</arg>
+</arguments>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${xpath_buton}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:38.024" level="INFO">Current page contains button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20200204 13:44:37.983" endtime="20200204 13:44:38.024"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:37.982" endtime="20200204 13:44:38.024"></status>
+</kw>
+<kw name="Texto" library="recursos">
+<arguments>
+<arg>(//input[@type='text'])[1]</arg>
+<arg>Rodrigo</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${arg1}</arg>
+<arg>${arg2}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:38.025" level="INFO">Typing text 'Rodrigo' into text field 'xpath=(//input[@type='text'])[1]'.</msg>
+<status status="PASS" starttime="20200204 13:44:38.025" endtime="20200204 13:44:38.115"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:38.024" endtime="20200204 13:44:38.115"></status>
+</kw>
+<kw name="Validar checkbox" library="recursos">
+<arguments>
+<arg>(//input[@class='inputbox'])[1]</arg>
+<arg>Tiene check</arg>
+</arguments>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<arguments>
+<arg>${xpath_checkbox}</arg>
+<arg>${mensaje}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:38.141" level="INFO">Current page contains checkbox '(//input[@class='inputbox'])[1]'.</msg>
+<status status="PASS" starttime="20200204 13:44:38.116" endtime="20200204 13:44:38.141"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:38.115" endtime="20200204 13:44:38.141"></status>
+</kw>
+<kw name="Cerrar setup" library="recursos" type="teardown">
+<kw name="Cerrar Todos" library="recursos">
+<kw name="Dormir" library="recursos">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${arg1}</arg>
+</arguments>
+<msg timestamp="20200204 13:44:40.144" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200204 13:44:38.142" endtime="20200204 13:44:40.144"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:38.142" endtime="20200204 13:44:40.145"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200204 13:44:40.145" endtime="20200204 13:44:42.230"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:38.142" endtime="20200204 13:44:42.230"></status>
+</kw>
+<status status="PASS" starttime="20200204 13:44:38.142" endtime="20200204 13:44:42.230"></status>
+</kw>
+<tags>
+<tag>CasoTres</tag>
+</tags>
+<status status="PASS" starttime="20200204 13:44:26.743" endtime="20200204 13:44:42.231" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200204 13:44:10.393" endtime="20200204 13:44:42.233"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0">CasoTres</stat>
+<stat pass="1" fail="0">CasoUno</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Validaciones">Validaciones</stat>
+<stat pass="2" fail="0" id="s1" name="Tags">Tags</stat>
 </suite>
 </statistics>
 <errors>

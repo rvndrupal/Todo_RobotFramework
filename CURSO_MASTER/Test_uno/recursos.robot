@@ -14,6 +14,16 @@ ${dir}      Img
 
 
 ***Keywords***
+
+Abrir setup
+    [Arguments]     ${url}  ${nav}
+    Abrir navegador  ${url}   ${nav}   
+    Maximizar
+
+Cerrar setup
+    Cerrar Todos
+
+
 Abrir navegador
     [Arguments]     ${arg1}   ${arg2}
     Open Browser    ${arg1}   ${arg2}
@@ -145,7 +155,8 @@ Switch Ventana
     Switch Browser      ${arg1}
 
 Obtener Titulo
-    Get Title    
+    ${titulo}=      Get Title 
+    [Return]     ${titulo}   
 
 Pantalla
     [Arguments]     ${arg1}
@@ -206,7 +217,7 @@ Continuar
     Print  OK continuo
 
 Cerrar Todos
-    Dormir  .4
+    Dormir  2
     Close All Browsers
 
 Cambiar navegador
@@ -326,6 +337,8 @@ Comparar
 # checar el de tiempo  Wait Until Keyword Succeeds 
     
 
+######## VALIDAR CAMPOS #####################
+
 Validar Texto
     [Arguments]     ${texto}
     Page Should Contain	    ${texto}
@@ -348,7 +361,36 @@ Validar imagen
 
 Validar tener texto
     [Arguments]     ${xpath_texto}   ${comparar}    ${mensaje}
-    Element Text Should Be        ${xpath_texto}    ${comparar}    ${mensaje}
+    Element Should Contain    ${xpath_texto}    ${comparar}    ${mensaje}
+
+Validar titulo
+    [Arguments]     ${titulo}   
+    Title Should Be     ${titulo}
+
+Validar elemento Disable
+    [Arguments]     ${xpath}   
+    Element Should Be Disabled      ${xpath}
+
+Validar elemento Enabled
+    [Arguments]     ${xpath}   
+    Element Should Be Enabled      ${xpath}
+
+
+Validar elemento Focus
+    [Arguments]     ${xpath}   
+    Element Should Be Focused      ${xpath}
+
+    
+
+    
+ 
+
+
+
+
+######## VALIDAR CAMPOS #####################
+
+
 
 
     
