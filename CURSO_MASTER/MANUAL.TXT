@@ -8,3 +8,22 @@ CSS and XPath checker  extension chrome
 
 ########################################
 Selenium IDE  par firefox   extension
+
+
+#################INSTALL ROBOT SIKULILIBARRY##############
+pip install robotframework-SikuliLibrary
+
+Instalar  https://app.prntscr.com/es/
+
+--> LightShot
+
+-->Presionar PrintScri teclado
+
+-->Instalar  https://launchpad.net/sikuli
+
+-->Instalar el chingon sikulixsetup-1.1.3 esta en la carpeta.
+
+
+
+
+###########################################################
